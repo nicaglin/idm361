@@ -1,3 +1,41 @@
-body {
-	background-color:#B1D1E1;
+.l-wrapper {
+	width: 320px;
+	margin: 0 auto;
 }
+.c-output {
+	text-align: center;
+}
+
+@media only screen and (orientation:portrait) {
+	body {
+		background-color: #b1e1d1
+	}
+	.c-face {
+		background: url(../img/face_smile.svg);
+		width: 100px;
+		height: 100px;
+		margin: 90px auto 10px;
+	}
+	.c-output::after {
+		content: 'portrait mode';
+	}
+}
+
+@media only screen and (orientation:landscape) {
+	body {
+		background-color: red;
+	}
+	.c-face {
+		background: url(../img/face_frown.svg);
+		width: 100px;
+		height: 100px;
+		margin: 90px auto 10px;
+	}
+	.c-output::after {
+		content: 'landscape mode';
+	}
+
+}
+
+
+/*displaying, or just positioning of the smile thingy if it's inline*/
